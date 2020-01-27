@@ -1,0 +1,13 @@
+{
+  "name": "jeyroik/extas-q-users",
+  "description": "Quality user package",
+  "require": {
+    "jeyroik/extas-base": "*",
+    "jeyroik/extas-installer": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "extas\\": "src/"
+    }
+  }
+}
