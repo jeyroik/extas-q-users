@@ -19,6 +19,7 @@ interface IUser extends IItem, IHasName, IHasDescription
     const FIELD__ISSUES_DONE_SUM = 'issues_done_sum';
     const FIELD__BUGS_SUM = 'bugs_sum';
     const FIELD__TIME_SPENT_SUM = 'time_spent_sum';
+    const FIELD__ISSUES_RETURNS = 'issues_returns';
 
     /**
      * @return int
@@ -39,6 +40,11 @@ interface IUser extends IItem, IHasName, IHasDescription
      * @return int
      */
     public function getBugsSum(): int;
+
+    /**
+     * @return int
+     */
+    public function getIssuesReturnsCount(): int;
 
     /**
      * @return int
@@ -65,6 +71,13 @@ interface IUser extends IItem, IHasName, IHasDescription
      * @return IUser
      */
     public function setBugsSum(int $bugsSum): IUser;
+
+    /**
+     * @param int $returnsCount
+     *
+     * @return IUser
+     */
+    public function setIssuesReturnsCount(int $returnsCount): IUser;
 
     /**
      * @param int $timeSpentSum

@@ -55,6 +55,14 @@ class User extends Item implements IUser
     /**
      * @return int
      */
+    public function getIssuesReturnsCount(): int
+    {
+        return $this->config[static::FIELD__ISSUES_RETURNS] ?? 0;
+    }
+
+    /**
+     * @return int
+     */
     public function getTimeSpentSum(): int
     {
         return $this->config[static::FIELD__TIME_SPENT_SUM] ?? 0;
@@ -92,6 +100,18 @@ class User extends Item implements IUser
     public function setBugsSum(int $bugsSum): IUser
     {
         $this->config[static::FIELD__BUGS_SUM] = $bugsSum;
+
+        return $this;
+    }
+
+    /**
+     * @param int $returnsCount
+     *
+     * @return IUser
+     */
+    public function setIssuesReturnsCount(int $returnsCount): IUser
+    {
+        $this->config[static::FIELD__ISSUES_RETURNS] = $returnsCount;
 
         return $this;
     }
