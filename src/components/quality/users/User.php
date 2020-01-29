@@ -23,7 +23,7 @@ class User extends Item implements IUser
     public function getQualificationIndex(): int
     {
         $indexRaw = ($this->getIssuesBVSum() + $this->getIssuesDoneSum()) /
-            (1 + $this->getBugsSum() + $this->getTimeSpentSum());
+            (1 + $this->getIssuesReturnsCount() + $this->getTimeSpentSum());
 
         return (int) round($indexRaw * 100);
     }
