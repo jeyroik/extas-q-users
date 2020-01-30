@@ -24,8 +24,8 @@ class User extends Item implements IUser
      */
     public function getQualificationIndex(): int
     {
-        $indexRaw = ($this->getIssuesBVSum() + $this->getIssuesDoneSum()) /
-            (1 + $this->getIssuesReturnsCount() + $this->getTimeSpentSum()/static::DAY);
+        $indexRaw = $this->getIssuesBVSum()/(1 + $this->getIssuesReturnsCount())
+            + $this->getIssuesDoneSum()/(1 + $this->getTimeSpentSum()/static::DAY);
 
         return (int) round($indexRaw * 100);
     }
