@@ -17,13 +17,15 @@ class User extends Item implements IUser
     use THasName;
     use THasDescription;
 
+    protected const DAY = 86400;
+
     /**
      * @return int
      */
     public function getQualificationIndex(): int
     {
         $indexRaw = ($this->getIssuesBVSum() + $this->getIssuesDoneSum()) /
-            (1 + $this->getIssuesReturnsCount() + $this->getTimeSpentSum());
+            (1 + $this->getIssuesReturnsCount() + $this->getTimeSpentSum()/static::DAY);
 
         return (int) round($indexRaw * 100);
     }
