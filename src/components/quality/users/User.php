@@ -27,7 +27,7 @@ class User extends Item implements IUser
         $indexRaw = ($this->getIssuesBVSum() + $this->getIssuesDoneSum()) /
         (1 + $this->getIssuesReturnsCount() + $this->getTimeSpentSum()/static::DAY);
 
-        return (int) round($indexRaw);
+        return (int) round($indexRaw)*10;
     }
 
     /**
