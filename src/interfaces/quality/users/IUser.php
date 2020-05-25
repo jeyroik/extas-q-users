@@ -13,13 +13,13 @@ use extas\interfaces\IItem;
  */
 interface IUser extends IItem, IHasName, IHasDescription
 {
-    const SUBJECT = 'extas.quality.user';
+    public const SUBJECT = 'extas.quality.user';
 
-    const FIELD__ISSUES_BUSINESS_VALUE_SUM = 'issues_business_value_sum';
-    const FIELD__ISSUES_DONE_SUM = 'issues_done_sum';
-    const FIELD__BUGS_SUM = 'bugs_sum';
-    const FIELD__TIME_SPENT_SUM = 'time_spent_sum';
-    const FIELD__ISSUES_RETURNS = 'issues_returns';
+    public const FIELD__ISSUES_BUSINESS_VALUE_SUM = 'issues_business_value_sum';
+    public const FIELD__ISSUES_DONE_SUM = 'issues_done_sum';
+    public const FIELD__BUGS_SUM = 'bugs_sum';
+    public const FIELD__TIME_SPENT_SUM = 'time_spent_sum';
+    public const FIELD__ISSUES_RETURNS = 'issues_returns';
 
     /**
      * @return int

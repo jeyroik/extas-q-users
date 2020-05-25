@@ -12,9 +12,9 @@ use extas\interfaces\quality\users\IUserRepository;
  */
 class PluginInstallQualityUsers extends PluginInstallDefault
 {
-    protected $selfItemClass = User::class;
-    protected $selfName = 'quality user';
-    protected $selfSection = 'quality_users';
-    protected $selfRepositoryClass = IUserRepository::class;
-    protected $selfUID = User::FIELD__NAME;
+    protected string $selfItemClass = User::class;
+    protected string $selfName = 'quality user';
+    protected string $selfSection = 'quality_users';
+    protected string $selfRepositoryClass = IUserRepository::class;
+    protected string $selfUID = User::FIELD__NAME;
 }

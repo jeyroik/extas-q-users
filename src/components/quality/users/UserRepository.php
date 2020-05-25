@@ -12,9 +12,8 @@ use extas\interfaces\quality\users\IUserRepository;
  */
 class UserRepository extends Repository implements IUserRepository
 {
-    protected $idAs = '';
-    protected $scope = 'extas';
-    protected $pk = User::FIELD__NAME;
-    protected $name = 'quality_users';
-    protected $itemClass = User::class;
+    protected string $scope = 'extas';
+    protected string $pk = User::FIELD__NAME;
+    protected string $name = 'quality_users';
+    protected string $itemClass = User::class;
 }
