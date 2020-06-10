@@ -28,7 +28,7 @@ phpunit.phar
 
 tests/_output/*
 tests/_support/_generated
-
+!tests/.env
 .env
 resources/configs/api.php
 resources/configs/middleware.php
