@@ -32,6 +32,6 @@ class UserTest extends TestCase
 
         $index = $user->getQualificationIndex();
         $this->assertEquals(10,$index);
-        $this->asserTEquals(1, $user->getBugsSum());
+        $this->assertEquals(1, $user->getBugsSum());
     }
 }

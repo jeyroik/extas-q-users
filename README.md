@@ -7,7 +7,6 @@
 [![Total Downloads](https://poser.pugx.org/jeyroik/extas-q-users/downloads)](//packagist.org/packages/jeyroik/extas-q-crawlers)
 [![Dependents](https://poser.pugx.org/jeyroik/extas-q-users/dependents)](//packagist.org/packages/jeyroik/extas-q-crawlers)
 
-
 # Описание
 
 User package for quality
