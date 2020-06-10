@@ -2,14 +2,18 @@
   "name": "extas/quality-users",
   "package_classes": [
     {
-      "interface": "userRepository",
+      "interface": "qualityUserRepository",
       "class": "extas\\components\\quality\\users\\UserRepository"
     }
   ],
   "plugins": [
     {
-      "class": "extas\\components\\plugins\\PluginInstallQualityUsers",
-      "stage": "extas.install"
+      "class": "extas\\components\\plugins\\install\\InstallQualityUsers",
+      "stage": "extas.install.section.quality_users"
+    },
+    {
+      "class": "extas\\components\\plugins\\uninstall\\UninstallQualityUsers",
+      "stage": "extas.uninstall.section.quality_users"
     }
   ],
   "extensions": [
@@ -18,7 +22,7 @@
       "interface": "extas\\interfaces\\extensions\\IExtensionRepositoryGet",
       "subject": "*",
       "methods": [
-        "userRepository"
+        "qualityUserRepository"
       ]
     }
   ]
